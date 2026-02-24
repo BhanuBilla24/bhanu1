@@ -1,1 +1,1 @@
-echo "my name "
+echo "my name"
