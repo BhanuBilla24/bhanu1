@@ -1,2 +1,1 @@
 echo "billa"
-echo "bhanu"
