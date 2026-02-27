@@ -1,4 +1,5 @@
-def hello (name) {
+def call (name) {
      echo "hello Mr $name"
 }
+
 
