@@ -7,8 +7,8 @@ pipeline {
   }
   parameters {
     string (name: "env", defaultValue: "main", description: "using main branch as default")
-    choices(name: "env", choices: ["main", "dev", "qa"])
-    booleanparam(name: "qa", defaultValue: "true")
+    choice (name: "env", choices: ["main", "dev", "qa"])
+    booleanparam (name: "qa", defaultValue: "true")
   }
   stages {
     stage ("git clone") {
