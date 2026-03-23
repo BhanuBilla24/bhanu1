@@ -6,7 +6,7 @@ pipeline {
     maven "maven"
   }
   parameters {
-    string (name: "env", defaultValue: "main", description: "using main branch as default")
+    //string (name: "env", defaultValue: "main", description: "using main branch as default")
     //choice (name: "env", choices: ["main", "dev", "qa"])
     booleanParam (name: "qa", defaultValue: true)
   }
