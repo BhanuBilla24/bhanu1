@@ -6,9 +6,9 @@ pipeline {
     maven "maven"
   }
   parameters {
-    string (name: "env", default: "main", description: "using main branch as default")
-    choices(name: "env", choices:["main", "dev", "qa"])
-    booleanparam(name: "qa", default: "true")
+    string (name: "env", defaultValue: "main", description: "using main branch as default")
+    choices(name: "env", choices: ["main", "dev", "qa"])
+    booleanparam(name: "qa", defaultValue: "true")
   }
   stages {
     stage ("git clone") {
