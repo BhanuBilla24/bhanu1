@@ -23,5 +23,15 @@ pipeline {
         }
       }
     }
+    stage ("Deploy") {
+      when {
+        expression {params.env}
+      }
+      steps {
+        script {
+          echo "deploying"
+        }
+      }
+    }
   }
 }
