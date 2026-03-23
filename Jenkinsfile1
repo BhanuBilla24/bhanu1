@@ -24,12 +24,11 @@ pipeline {
       }
     }
     stage ("Deploy") {
-      if (true) {
-        steps {
-          script {
-            echo "deploying"
-          }
-        }
+      when {
+        expression {params.Deploy}
+      }
+      steps {
+        echo "Deploying "
       }
     }
   }
