@@ -24,12 +24,11 @@ pipeline {
       }
     }
     stage ("Deploy") {
-      when {
-        expression {params.env}
-      }
-      steps {
-        script {
-          echo "deploying"
+      if (true) {
+        steps {
+          script {
+            echo "deploying"
+          }
         }
       }
     }
