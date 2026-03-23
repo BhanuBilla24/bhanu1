@@ -1,0 +1,27 @@
+@Library("test.groovy")_
+pipeline {
+  agent any
+  tools {
+    jdk "jdk21"
+    maven "maven"
+  }
+  parameters {
+    string (name: "env", default: "main", description: "using main branch as default")
+    choices(name: "env", choices:["main", "dev", "qa"])
+    booleanparam(name: "qa", default: "true")
+  }
+  stages {
+    stage ("git clone") {
+      steps {
+        git branch: param.env, url: 'https://github.com/BhanuBilla24/bhanu1.git'
+      } 
+    }
+    stage ("test") {
+      steps {
+        script {
+          test ()
+        }
+      }
+    }
+  }
+}
