@@ -1,4 +1,4 @@
-def call(params.env) {
+def call(env) {
   if (params.env=="main") {
     sh echo "testing in main"
   }
